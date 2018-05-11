@@ -1,32 +1,40 @@
 package com.me;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-
-@XmlRootElement
+//step 1 class
 public class MarathonItem {
 
-    char gender;
-    String FirstName;
-    String LastName;
-    String Race;
-    double MinutePerMile;
-    double Time;
+    //step 2 fields
+    private String FirstName;
+    private String LastName;
+    private String Race;
+    private String MinutePerMile;
+    private String TimeInMarathon;
+    private String Gender;
 
-    public Character getGender() {
-        return gender;
+    //overloading methods
+    public MarathonItem(){
+
+        FirstName = "";
+        LastName = "";
+        Race = "";
+        MinutePerMile = "";
+        TimeInMarathon = "";
+        Gender = "";
     }
 
-    @XmlElement
-    public void setGender(char gender) {
-        this.gender = gender;
+    public MarathonItem(String firstName, String lastName, String race, String minutePerMile, String timeInMarathon, String gender) {
+        FirstName = firstName;
+        LastName = lastName;
+        Race = race;
+        MinutePerMile = minutePerMile;
+        TimeInMarathon = timeInMarathon;
+        Gender = gender;
     }
 
     public String getFirstName() {
         return FirstName;
     }
 
-    @XmlElement
     public void setFirstName(String firstName) {
         FirstName = firstName;
     }
@@ -35,35 +43,39 @@ public class MarathonItem {
         return LastName;
     }
 
-    @XmlElement
     public void setLastName(String lastName) {
         LastName = lastName;
-    }
-
-    public double getMinutePerMile() {
-        return MinutePerMile;
-    }
-
-    @XmlElement
-    public void setMinutePerMile(double minutePerMile) {
-        MinutePerMile = minutePerMile;
     }
 
     public String getRace() {
         return Race;
     }
 
-    @XmlElement
     public void setRace(String race) {
         Race = race;
     }
 
-    public double getTime() {
-        return Time;
+    public String getMinutePerMile() {
+        return MinutePerMile;
     }
 
-    @XmlElement
-    public void setTime(double time) {
-        Time = time;
+    public void setMinutePerMile(String minutePerMile) {
+        MinutePerMile = minutePerMile;
+    }
+
+    public String getTimeInMarathon() {
+        return TimeInMarathon;
+    }
+
+    public void setTimeInMarathon(String timeInMarathon) {
+        TimeInMarathon = timeInMarathon;
+    }
+
+    public String getGender() {
+        return Gender;
+    }
+
+    public void setGender(String gender) {
+        Gender = gender;
     }
 }
