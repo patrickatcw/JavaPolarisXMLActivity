@@ -13,51 +13,50 @@ package com.me;
 
 //https://www.youtube.com/watch?v=HfGWVy-eMRc
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-
-import javax.swing.text.Document;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.File;
+import java.io.IOException;
 
 public class Main {
 
-    private static String _XMLFile = "C:\\java\\JavaPolarisXML\\src\\com\\patrick\\resources\\clevelandMarathon.xml";
 
     public static void main(String[] args) {
 
-        Deserialize();
-        Serialize();
-
-    }
-
-    private static void Deserialize() {
-        //open file
-        //place the file into the object
-        File file = new File(_XMLFile);
-        DocumentBuilderFactory doc = DocumentBuilderFactory.newInstance();
-        try{
-            DocumentBuilder build = doc.newDocumentBuilder();
-            Document document = new Document() {
-            };
-            document.getDocumentElement().normalize();
-
+        DocumentBuilderFactory  factory= DocumentBuilderFactory.newInstance();
+        try {
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document doc = builder.parse("C:\\java\\JavaPolarisXMLActivity\\src\\resources\\clevelandMarathon.xml");
+            NodeList runnerList = doc.getElementsByTagName("runners");
+            for(int i = 0; i < runnerList.getLength();i ++ ){
+                Node r = runnerList.item(i);
+                if(r.getNodeType() == Node.ELEMENT_NODE){
+                    Element runners = (Element) r;
+                      String Name = runners.getAttribute("Name");
+                      NodeList nameList = runners.getChildNodes();
+                      for(int j = 0; j < nameList.getLength(); j++){
+                          Node n = nameList.item(j);
+                          if(n.getNodeType() == Node.ELEMENT_NODE){
+                              Element name = (Element) n;
+                              System.out.println("Runner " + runners + ":" + name.getTagName()
+                              + " = " + runners.getTextContent());
+                          }
+                      }
+                }
+            }
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
-        } catch (SAXException e){
+        } catch (SAXException e) {
             e.printStackTrace();
-        } catch ()
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
-
-    private static void Serialize() {
-        //open file
-        //write the object into the file
-
-    }
-
 
 }
-
-
