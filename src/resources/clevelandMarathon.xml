@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Runners>
+	<Name gender="M">
+		<FirstName>Brian</FirstName>
+		<LastName>Hunter</LastName>
+		<Race>5K</Race>
+		<MinutePerMile>5:10</MinutePerMile>
+		<Time>16:05.90</Time>
+	</Name>
+	<Name gender="M">
+		<FirstName>Salvatora</FirstName>
+		<LastName>Benesh</LastName>
+		<Race>5K</Race>
+		<MinutePerMile>5:11</MinutePerMile>
+		<Time>16:25.37</Time>
+	</Name>
+	<Name gender="M">
+		<FirstName>Dontell</FirstName>
+		<LastName>McDermitt</LastName>
+		<Race>5K</Race>
+		<MinutePerMile>5:05</MinutePerMile>
+		<Time>16:00.23</Time>
+	</Name>
+	<Name gender="M">
+		<FirstName>Ricardo</FirstName>
+		<LastName>Rodriguez</LastName>
+		<Race>5K</Race>
+		<MinutePerMile>5:05</MinutePerMile>
+		<Time>16:00.23</Time>
+	</Name>
+	<Name gender="F">
+		<FirstName>Zola</FirstName>
+		<LastName>Budd</LastName>
+		<Race>5K</Race>
+		<MinutePerMile>4:35</MinutePerMile>
+		<Time>14:40.03</Time>
+	</Name>
+	<Name gender="F">
+		<FirstName>Mary</FirstName>
+		<LastName>Decker-Slaney</LastName>
+		<Race>5K</Race>
+		<MinutePerMile>4:33</MinutePerMile>
+		<Time>14:39.69</Time>
+	</Name>
+	<Name gender="F">
+		<FirstName>Moeisha</FirstName>
+		<LastName>Chambers</LastName>
+		<Race>5K</Race>
+		<MinutePerMile>7:23</MinutePerMile>
+		<Time>20:02.09</Time>
+	</Name>
+</Runners>
